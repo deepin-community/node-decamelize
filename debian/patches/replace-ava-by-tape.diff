@@ -1,0 +1,29 @@
+Description: replace ava by tape in test
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2020-05-13
+
+--- a/test.js
++++ b/test.js
+@@ -1,5 +1,5 @@
+-import test from 'ava';
+-import decamelize from '.';
++const test = require('tape');
++const decamelize = require('.');
+ 
+ test('decamelize', t => {
+ 	t.is(decamelize(''), '');
+@@ -11,6 +11,7 @@
+ 	t.is(decamelize('thisIsATest', ''), 'thisisatest');
+ 	t.is(decamelize('unicornRainbow', '|'), 'unicorn|rainbow');
+ 	t.is(decamelize('thisHasSpecialCharactersLikeČandŠ', ' '), 'this has special characters like čand š');
++    t.end();
+ });
+ 
+ test('handles acronyms', t => {
+@@ -19,4 +20,5 @@
+ 	t.is(decamelize('StringURL'), 'string_url');
+ 	t.is(decamelize('testGUILabel'), 'test_gui_label');
+ 	t.is(decamelize('CAPLOCKED1'), 'caplocked1');
++    t.end();
+ });
