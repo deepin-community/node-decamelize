@@ -3,4 +3,4 @@ opts=\
 ctype=nodejs,\
 dversionmangle=auto,\
 filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-decamelize-$1.tar.gz/ \
- https://github.com/sindresorhus/decamelize/tags .*/archive/v?([\d\.]+).tar.gz
+ https://github.com/sindresorhus/decamelize/tags .*/archive/.*/v?([\d\.]+).tar.gz

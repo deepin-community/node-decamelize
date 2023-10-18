@@ -1,3 +1,12 @@
+node-decamelize (4.0.0-2) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + node-decamelize: Add Multi-Arch: foreign.
+  * Update standards version to 4.6.1, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Fri, 02 Dec 2022 16:43:04 +0000
+
 node-decamelize (4.0.0-1) unstable; urgency=medium
 
   * Team upload
